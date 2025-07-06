@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="header-img" src="img/Vector (18).svg" alt="" />
+      <div class="header-box">
+        <a class="header-box-link" href="">Мои расходы</a>
+        <a class="header-box-link" href="">Анализ расходов</a>
+      </div>
+      <button class="button-header">Выйти</button>
+    </header>
+    <h1 class="title">Мои расходы</h1>
+    <div class="expenses">
+      <div class="expenses-left">
+        <h2 class="expenses-title">Таблица расходов</h2>
+        <div class="expenses-header">
+          <p class="expenses-header-text">Описание</p>
+          <p class="expenses-header-text">Категория</p>
+          <p class="expenses-header-text">Дата</p>
+          <p class="expenses-header-text">Сумма</p>
+        </div>
+        <div class="expenses-box">
+          <p class="expenses-box-text">Пятерочка</p>
+          <p class="expenses-box-text">Еда</p>
+          <p class="expenses-box-text">03.07.2024</p>
+          <p class="expenses-box-text">3 500 ₽</p>
+          <b></b>
+        </div>
+      </div>
+      <div class="expenses-new">
+        <h3 class="expenses-title">Новый расход</h3>
+        <p class="expenses-new-text">Описание</p>
+        <input
+          class="expenses-new-input"
+          placeholder="Введите описание"
+          type="text"
+        />
+        <p class="expenses-new-text">Категория</p>
+        <div class="expenses-new-box">
+          <div class="expenses-new-category">
+            <b></b>
+            <p class="expenses-new-category-text">Еда</p>
+          </div>
+          <div class="expenses-new-category">
+            <b></b>
+            <p class="expenses-new-category-text">Транспорт</p>
+          </div>
+          <div class="expenses-new-category">
+            <b></b>
+            <p class="expenses-new-category-text">Жилье</p>
+          </div>
+          <div class="expenses-new-category">
+            <b></b>
+            <p class="expenses-new-category-text">Развлечения</p>
+          </div>
+          <div class="expenses-new-category">
+            <b></b>
+            <p class="expenses-new-category-text">Образование</p>
+          </div>
+          <div class="expenses-new-category">
+            <b></b>
+            <p class="expenses-new-category-text">Другое</p>
+          </div>
+        </div>
+        <p class="expenses-new-text">Дата</p>
+        <input
+          class="expenses-new-input"
+          placeholder="Введите дату"
+          type="text"
+        />
+        <p class="expenses-new-text">Сумма</p>
+        <input
+          class="expenses-new-input"
+          placeholder="Введите сумму"
+          type="text"
+        />
+        <button class="expenses-new-button">Добавить новый расход</button>
+      </div>
+    </div>
+  </body>
+</html>

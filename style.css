@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(190, 190, 190);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    padding: 20px 120px;
+}
+
+.header-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+}
+
+.header-box-link {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 170%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-box-link:active {
+    color: rgb(115, 52, 234);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 170%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.button-header {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 170%;
+    letter-spacing: 0px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-left: calc(40% - 400px);
+    margin-right: calc(40% - 400px);
+}
+
+.expenses {
+    display: flex;
+    flex-direction: row;
+    margin-left: calc(40% - 400px);
+    margin-right: calc(40% - 400px);
+    gap: 34px;
+}
+
+.expenses-left {
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 32px;
+    max-width: 789px;
+}
+
+.expenses-title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.expenses-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(153, 153, 153);
+    gap: 108px;
+}
+
+.expenses-header-text {
+    color: rgb(153, 153, 153);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.expenses-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 108px;
+}
+
+.expenses-box-text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.expenses-new {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+    background: rgb(255, 255, 255);
+    padding: 32px 34px;
+    min-width: 379px;
+}
+
+
+.expenses-title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.expenses-new-text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.expenses-new-input {
+    box-sizing: border-box;
+    border: 0.5px solid rgb(153, 153, 153);
+    border-radius: 6px;
+    width: 100%;
+    padding: 12px;
+}
+
+.expenses-new-input::placeholder {
+    color: rgb(153, 153, 153);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: start;
+}
+
+.expenses-new-button {
+    border-radius: 6px;
+    background: rgb(115, 52, 234);
+    padding: 12px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: 24px;
+    width: 100%;
+}
