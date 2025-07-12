@@ -20,27 +20,24 @@ body {
     gap: 48px;
 }
 
+
 .header-box-link {
     color: rgb(0, 0, 0);
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 400;
     line-height: 170%;
-    letter-spacing: 0px;
-    text-align: center;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.3s ease;
+    padding: 4px 0;
 }
 
-.header-box-link:active {
+/* Стиль только для текущей страницы */
+.header-box-link[aria-current="page"] {
     color: rgb(115, 52, 234);
-    font-family: Montserrat;
-    font-size: 14px;
     font-weight: 600;
-    line-height: 170%;
-    letter-spacing: 0px;
-    text-align: center;
-    text-decoration-line: underline;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .button-header {
@@ -82,7 +79,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     max-width: 789px;
 }
 
@@ -94,14 +92,16 @@ body {
     line-height: 29px;
     letter-spacing: 0px;
     text-align: center;
+    padding: 0 32px 32px;
+    margin: 0;
 }
 
 .expenses-header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-bottom: 0.5px solid rgb(153, 153, 153);
     gap: 108px;
+    padding: 0 32px 6px;
 }
 
 .expenses-header-text {
@@ -112,6 +112,7 @@ body {
     line-height: 15px;
     letter-spacing: 0px;
     text-align: left;
+    margin: 0;
 }
 
 .expenses-box {
@@ -119,6 +120,9 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 108px;
+    border-top: 0.5px solid rgb(153, 153, 153);
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .expenses-box-text {
@@ -169,6 +173,37 @@ body {
     border-radius: 6px;
     width: 100%;
     padding: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+    margin-bottom: 16px;
+    background-color: white;
+}
+
+/* Состояние при фокусе */
+.expenses-new-input:focus {
+    border-color: rgb(241, 235, 253);
+    box-shadow: 0 0 0 1px #7334EA;
+}
+
+/* Валидное состояние */
+.expenses-new-input.valid {
+    border: 1px solid #7334EA;
+    background-color: rgba(115, 52, 234, 0.05);
+}
+
+/* Для поля даты - календарик справа */
+.expenses-new-input[type="date"] {
+    position: relative;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23999999"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+.expenses-new-input[type="date"].valid {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%237334EA"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>');
 }
 
 .expenses-new-input::placeholder {
@@ -195,4 +230,183 @@ body {
     text-align: center;
     margin-top: 24px;
     width: 100%;
+}
+
+.expenses-new-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-width: 277px;
+}
+
+.expenses-new-category-text {
+    border-radius: 30px;
+    background: rgb(244, 245, 246);
+    padding: 8px 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+
+.expenses-new-category-text.selected {
+    background: rgba(115, 52, 234, 0.1);
+    color: rgb(115, 52, 234);
+}
+
+.calendar {
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+    background: rgb(255, 255, 255);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    max-width: 379px;
+}
+
+.calendar-title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.calendar-days {
+    color: rgb(153, 153, 153);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.calendar-number {
+    border-top: 0.5px solid rgb(153, 153, 153);
+    padding-left: 32px;
+    padding-top: 25px;
+}
+
+.calendar-number-month {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+}
+
+.calendar-number-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 12px;
+}
+
+.number {
+    border-radius: 60px;
+    background: rgb(244, 245, 246);
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+
+
+.chart {
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+    background: rgb(255, 255, 255);
+    padding: 32px 32px 44px 32px;
+}
+
+.chart-price-title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+.chart-price-text {
+    color: rgb(153, 153, 153);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+}
+
+.chart-img {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 32px;
+}
+
+.chart-img-name--text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 0;
+    padding-top: 21px;
+}
+
+.chart-img-name--miniText {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 0;
+    padding-top: 12px;
+}
+
+.chart-img-name--analytics {
+    border-radius: 12px;
+    background: rgb(217, 182, 255);
+    height: 328px;
+    max-width: 94px;
 }
